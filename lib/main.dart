@@ -8,11 +8,11 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  runApp(mepo());
+  runApp(Mepo());
 }
 
-class mepo extends StatelessWidget {
-  const mepo({Key key}) : super(key: key);
+class Mepo extends StatelessWidget {
+  const Mepo({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

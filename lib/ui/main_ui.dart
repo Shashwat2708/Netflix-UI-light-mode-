@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mepo/home_screens/components/categories/category_file.dart';
 
 class MainUi extends StatefulWidget {
   const MainUi({Key key}) : super(key: key);
@@ -24,6 +25,9 @@ class _MainUiState extends State<MainUi> {
                       child: Container(
                         child: Column(
                           children: [
+                            SizedBox(
+                              height: 10,
+                            ),
                             IconButton(
                                 icon: Icon(
                                   Icons.arrow_back,
@@ -34,44 +38,56 @@ class _MainUiState extends State<MainUi> {
                                   Navigator.pop(context);
                                 }),
                             SizedBox(
-                              height: 50,
+                              height: 30,
                             ),
                             Column(
                               //mepostars
                               children: [
                                 Text(
                                   "data",
-                                  style: TextStyle(fontSize: 25),
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.black),
                                 ),
                                 Text(
                                   "data",
-                                  style: TextStyle(fontSize: 15),
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black),
                                 ),
                               ],
+                            ),
+                            SizedBox(
+                              height: 50,
                             ),
                             Column(
                               //imbd
                               children: [
                                 Text(
                                   "data",
-                                  style: TextStyle(fontSize: 25),
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.black),
                                 ),
                                 Text(
                                   "data",
-                                  style: TextStyle(fontSize: 15),
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black),
                                 ),
                               ],
+                            ),
+                            SizedBox(
+                              height: 50,
                             ),
                             Column(
                               //rottent tomatoes
                               children: [
                                 Text(
                                   "data",
-                                  style: TextStyle(fontSize: 25),
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.black),
                                 ),
                                 Text(
                                   "data",
-                                  style: TextStyle(fontSize: 15),
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black),
                                 ),
                               ],
                             )
@@ -109,15 +125,26 @@ class _MainUiState extends State<MainUi> {
               SizedBox(
                 height: 15,
               ),
-              Text(
-                "Watch ON",
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-              ),
               Padding(
                 padding: const EdgeInsets.only(left: 30, top: 10),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    Text(
+                      "Watch ON",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          shadows: [
+                            Shadow(
+                                color: Colors.grey[300],
+                                blurRadius: 5,
+                                offset: Offset(1, 1))
+                          ]),
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
                     InkWell(
                       child: Container(
                         height: size.height * 0.08,
@@ -128,10 +155,12 @@ class _MainUiState extends State<MainUi> {
                               "assets/images/others/Netflix logo.png"),
                         ),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        print("Netflix link");
+                      },
                     ),
                     SizedBox(
-                      width: 50,
+                      width: 30,
                     ),
                     InkWell(
                       child: Container(
@@ -144,11 +173,101 @@ class _MainUiState extends State<MainUi> {
                         ),
                       ),
                       onTap: () {
-                        print("Dummy Text");
+                        print("Amazon prime link");
                       },
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      offset: Offset(0.0, 5.0),
+                      blurRadius: 6.0,
+                    )
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Text("Watch For Free",
+                        style: TextStyle(fontSize: 20, color: Colors.white)),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          onPrimary: Colors.white,
+                          shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(30))),
+                        ),
+                        onPressed: () {
+                          print("fetch free links");
+                        },
+                        child: Text("Get Links",
+                            style:
+                                TextStyle(fontSize: 15, color: Colors.black))),
+                  ],
+                ),
+              ),
+              Card(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                margin: EdgeInsets.all(10),
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "The Croods: A New Age",
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text("Actors: Ryan Reynolds, Emma Stone, Nicolas Cage",
+                            style:
+                                TextStyle(fontSize: 18, color: Colors.black)),
+                        Text(
+                            "Summary:" +
+                                "\n" +
+                                "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs",
+                            style:
+                                TextStyle(fontSize: 18, color: Colors.black)),
+                      ]),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text("Watch More",
+                        style: TextStyle(
+                            fontSize: 21,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold)),
+                  ),
+                  Animated(),
+                ],
               )
             ],
           ),
