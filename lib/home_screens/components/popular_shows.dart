@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class popular_shows extends StatelessWidget {
   const popular_shows({
     Key key,
@@ -70,39 +69,34 @@ class Popular_Shows_Card extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: <Widget>[
-          Image.asset(image),
-          GestureDetector(
+          InkWell(
             onTap: press,
             child: Container(
-              padding: EdgeInsets.all(10),
+              height: size.height * 0.3,
               decoration: BoxDecoration(
-                color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                ),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30),
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)),
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 50,
-                    color: Colors.black.withOpacity(0.23),
+                    color: Colors.black26,
+                    offset: Offset(0.0, 2.0),
+                    blurRadius: 6.0,
                   ),
                 ],
               ),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Text(
-                        "$title",
-                        overflow: TextOverflow.ellipsis,
-                        //maxLines: 1,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,)),
-                  ),
-
-                ],
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)),
+                child: Image(
+                  image: AssetImage(image),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           )

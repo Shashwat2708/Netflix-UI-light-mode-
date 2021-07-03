@@ -125,65 +125,69 @@ class _MainUiState extends State<MainUi> {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 30, top: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Watch ON",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          shadows: [
-                            Shadow(
-                                color: Colors.grey[300],
-                                blurRadius: 5,
-                                offset: Offset(1, 1))
-                          ]),
-                    ),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    InkWell(
-                      child: Container(
-                        height: size.height * 0.08,
-                        //color: Colors.black,
-                        child: Image(
-                          //netflix link
-                          image: AssetImage(
-                              "assets/images/others/Netflix logo.png"),
-                        ),
-                      ),
-                      onTap: () {
-                        print("Netflix link");
-                      },
-                    ),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    InkWell(
-                      child: Container(
-                        height: size.height * 0.1,
-                        //color: Colors.black,
-                        child: Image(
-                          //Amazon prime link
-                          image: AssetImage(
-                              "assets/images/others/Amazon prime logo.png"),
-                        ),
-                      ),
-                      onTap: () {
-                        print("Amazon prime link");
-                      },
-                    ),
-                  ],
-                ),
-              ),
+
+              //watch on netflix or prime
+
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 30, top: 10, right: 30),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       Text(
+              //         "Watch ON",
+              //         style: TextStyle(
+              //             fontSize: 20,
+              //             fontWeight: FontWeight.bold,
+              //             shadows: [
+              //               Shadow(
+              //                   color: Colors.grey[300],
+              //                   blurRadius: 5,
+              //                   offset: Offset(1, 1))
+              //             ]),
+              //       ),
+              //       SizedBox(
+              //         width: 30,
+              //       ),
+              //       InkWell(
+              //         child: Container(
+              //           height: size.height * 0.06,
+              //           //color: Colors.black,
+              //           child: Image(
+              //             //netflix link
+              //             image: AssetImage(
+              //                 "assets/images/others/Netflix logo.png"),
+              //           ),
+              //         ),
+              //         onTap: () {
+              //           print("Netflix link");
+              //         },
+              //       ),
+              //       SizedBox(
+              //         width: 30,
+              //       ),
+              //       InkWell(
+              //         child: Container(
+              //           height: size.height * 0.07,
+              //           //color: Colors.black,
+              //           child: Image(
+              //             //Amazon prime link
+              //             image: AssetImage(
+              //                 "assets/images/others/Amazon prime logo.png"),
+              //           ),
+              //         ),
+              //         onTap: () {
+              //           print("Amazon prime link");
+              //         },
+              //       ),
+              //     ],
+              //   ),
+              // ),
+
               SizedBox(
                 height: 15,
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
+                padding: EdgeInsets.fromLTRB(70, 20, 70, 20),
                 decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(30),
@@ -219,13 +223,17 @@ class _MainUiState extends State<MainUi> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+
               Card(
                 elevation: 10,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 margin: EdgeInsets.all(10),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                  padding: EdgeInsets.fromLTRB(30, 5, 30, 20),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -240,21 +248,73 @@ class _MainUiState extends State<MainUi> {
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
-                        Text("Actors: Ryan Reynolds, Emma Stone, Nicolas Cage",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
                         Text(
-                            "Summary:" +
-                                "\n" +
-                                "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs",
+                            "\n" +
+                                "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs.",
                             style:
                                 TextStyle(fontSize: 18, color: Colors.black)),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 30, top: 10, right: 30),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Watch ON",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    shadows: [
+                                      Shadow(
+                                          color: Colors.grey[300],
+                                          blurRadius: 5,
+                                          offset: Offset(1, 1))
+                                    ]),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              InkWell(
+                                child: Container(
+                                  height: size.height * 0.06,
+                                  //color: Colors.black,
+                                  child: Image(
+                                    //netflix link
+                                    image: AssetImage(
+                                        "assets/images/others/Netflix logo.png"),
+                                  ),
+                                ),
+                                onTap: () {
+                                  print("Netflix link");
+                                },
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              InkWell(
+                                child: Container(
+                                  height: size.height * 0.07,
+                                  //color: Colors.black,
+                                  child: Image(
+                                    //Amazon prime link
+                                    image: AssetImage(
+                                        "assets/images/others/Amazon prime logo.png"),
+                                  ),
+                                ),
+                                onTap: () {
+                                  print("Amazon prime link");
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
                       ]),
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 10,
               ),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -268,7 +328,7 @@ class _MainUiState extends State<MainUi> {
                   ),
                   Animated(),
                 ],
-              )
+              ),
             ],
           ),
         ),
