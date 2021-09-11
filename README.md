@@ -1,8 +1,9 @@
 # mepo
 
 This is a redesign of the netflix UI with light mode. 
-<br /> ![Screenshot_1631373295](https://user-images.githubusercontent.com/62276296/132952695-2681bcc6-df0b-4abe-ab1f-ec85d7afc4d7.png)   
-![Screenshot_1631373347](https://user-images.githubusercontent.com/62276296/132952702-be68e20a-0f07-413f-a1eb-5da8325da49b.png)
+<br/>
+<br />![Screenshot_1631373295](https://user-images.githubusercontent.com/62276296/132952749-c7d6710c-d150-496c-9cec-13c2dd5227d3.png)![Screenshot_1631373347](https://user-images.githubusercontent.com/62276296/132952752-72b4c8ef-aa2d-4e06-b171-b63d607b7739.png)
+
 
 <br />This project will teach you multiple things and will give a good knowledge on how to use classes and objects efficiently. You will also learn how to use the export method in flutter.
 
