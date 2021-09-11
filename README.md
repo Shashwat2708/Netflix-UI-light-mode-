@@ -1,6 +1,6 @@
 # mepo
 
-A new Flutter project.
+This is a redesign of the netflix UI with light mode. <br />This project will teach you multiple things and will give a good knowledge on how to use classes and objects efficiently. You will also learn how to use the export method in flutter.
 
 ## Getting Started
 
