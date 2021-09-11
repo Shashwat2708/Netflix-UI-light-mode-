@@ -8,16 +8,16 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  runApp(Mepo());
+  runApp(Netflix());
 }
 
-class Mepo extends StatelessWidget {
-  const Mepo({Key key}) : super(key: key);
+class Netflix extends StatelessWidget {
+  const Netflix({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "MEPO",
+      title: "Netflix UI",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         accentColor: Colors.black,
